@@ -1,0 +1,88 @@
+@use "../styles.scss" as base;
+
+:host {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 1rem;
+}
+
+article {
+  position: relative;
+  background-color: base.$dark-grayish-blue;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 28rem;
+}
+
+section {
+  padding: 2.5rem 1.5rem;
+}
+
+h2 {
+  color: base.$neon-green;
+  font-size: 0.625rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  margin-bottom: 1.375rem;
+
+  &::before {
+    content: "“";
+    white-space: nowrap;
+  }
+
+  &::after {
+    content: "”";
+    white-space: nowrap;
+  }
+}
+
+.divider {
+  margin-bottom: 1.5rem;
+}
+
+.button-container {
+  position: absolute;
+  width: 100%;
+  bottom: -1.75rem;
+}
+
+button {
+  background-color: base.$neon-green;
+  border: none;
+  padding: 1.125rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 35px base.$neon-green;
+  }
+}
+
+img {
+  margin: auto;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    color: base.$grayish-blue;
+  }
+
+  a:hover {
+    color: base.$light-cyan;
+  }
+}

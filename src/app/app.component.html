@@ -1,0 +1,25 @@
+<main>
+  <article>
+    <section>
+      <h2>{{ advice ? "Advice #" + advice.slip.id : "Advice generator" }}</h2>
+      <!-- prettier-ignore -->
+      <blockquote>{{advice ? advice.slip.advice : "Click the dice button to get your advice!"}}</blockquote>
+      <picture class="divider">
+        <source media="(min-width: 38rem)" srcset="assets/images/pattern-divider-desktop.svg" />
+        <img src="assets/images/pattern-divider-mobile.svg" alt="divider" />
+      </picture>
+    </section>
+    <div class="button-container">
+      <button (click)="generateAdvice()" aria-label="Get new advice">
+        <img src="assets/images/icon-dice.svg" alt="" />
+      </button>
+    </div>
+  </article>
+</main>
+<footer>
+  <p>
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="#">Ragul</a>.
+  </p>
+</footer>
